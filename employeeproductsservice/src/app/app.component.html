@@ -1,8 +1,21 @@
-<div><p>App Component</p></div>
-<nav>
-  <a routerLink="/">Home</a>
-  <a routerLink="/employees">Employees</a>
-</nav>
 
-<!-- Routed components will be displayed here -->
+
+
+<div class="flex h-screen">
+  <!-- Left Sidebar -->
+  <aside class="w-64 bg-gray-800 text-white h-full p-4">
+    <h2 class="text-lg font-semibold mb-4">Employee-Product</h2>
+    <ul>
+      <li class="mb-2">
+        <a routerLink="/" class="block py-2 px-4 rounded hover:bg-gray-700">Home</a>
+      </li>
+      <li class="mb-2">
+        <a routerLink="/employees" class="block py-2 px-4 rounded hover:bg-gray-700">Employees</a>
+      </li>     
+    </ul>
+  </aside>
+  <!-- Routed components will be displayed here -->
 <router-outlet></router-outlet>
+</div>
+
+

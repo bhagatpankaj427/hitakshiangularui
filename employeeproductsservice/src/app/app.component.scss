@@ -1,0 +1,27 @@
+.flex {
+    display: flex;
+    height: 100vh;
+  }
+  aside {
+    width: 250px;
+    background-color: #2d3748;
+    color: white;
+    padding: 20px;
+  }
+  aside ul {
+    list-style: none;
+    padding: 0;
+  }
+  aside ul li {
+    margin-bottom: 10px;
+  }
+  aside ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+  }
+  aside ul li a:hover {
+    background-color: #4a5568;
+  }

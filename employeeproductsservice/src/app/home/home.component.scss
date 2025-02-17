@@ -1,0 +1,17 @@
+.container {
+    max-width: 800px;
+    margin: auto;
+  }
+  table {
+    width: 80%;
+    border-collapse: collapse;
+    position: fixed;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f4f4f4;
+  }
