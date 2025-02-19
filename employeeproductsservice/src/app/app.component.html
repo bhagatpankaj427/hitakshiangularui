@@ -1,7 +1,4 @@
-
-
-
-<div class="flex h-screen">
+<div class="flex h-screen relative"> <!-- Make sure it's relative for the loader to be fixed -->
   <!-- Left Sidebar -->
   <aside class="w-64 bg-gray-800 text-white h-full p-4">
     <h2 class="text-lg font-semibold mb-4">Employee-Product</h2>
@@ -10,12 +7,16 @@
         <a routerLink="/" class="block py-2 px-4 rounded hover:bg-gray-700">Home</a>
       </li>
       <li class="mb-2">
-        <a routerLink="/employees" class="block py-2 px-4 rounded hover:bg-gray-700">Employees</a>
+        <a routerLink="/employees" class="block py-2 px-4 rounded hover:bg-gray-700" (click)="fetchData()">Employees</a>
       </li>     
     </ul>
   </aside>
+
+  <!-- Loader -->
+  <mat-progress-bar *ngIf="isLoading$ | async" mode="indeterminate"></mat-progress-bar>
+
   <!-- Routed components will be displayed here -->
-<router-outlet></router-outlet>
+  <div class="flex-1 ml-64"> <!-- Ensures content doesn't overlap sidebar -->
+    <router-outlet></router-outlet>
+  </div>
 </div>
-
-
