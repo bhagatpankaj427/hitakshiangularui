@@ -1,0 +1,42 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav mode="side" opened>
+    <div class="sidebar">
+      <h3>Menu</h3>
+
+      <!-- Dashboard -->
+      <button mat-button class="menu-item" routerLink="/">
+        <mat-icon>dashboard</mat-icon> Employee-Products
+      </button>
+
+      <!-- Employee (Collapsible) -->
+      <button mat-button class="menu-item" (click)="toggleOrders()">
+        <mat-icon>group</mat-icon> Employees
+        <mat-icon class="expand-icon">{{ ordersExpanded ? 'expand_less' : 'expand_more' }}</mat-icon>
+      </button>
+      <div class="submenu" *ngIf="ordersExpanded">
+        <a mat-button class="submenu-item" routerLink="/employees">Employees</a>
+        <a mat-button class="submenu-item" routerLink="/addemployees">Add Employee</a>
+      </div>
+
+      <!-- Products (Collapsible) -->
+      <button mat-button class="menu-item" (click)="toggleReports()">
+        <mat-icon>store</mat-icon> Products
+        <mat-icon class="expand-icon">{{ reportsExpanded ? 'expand_less' : 'expand_more' }}</mat-icon>
+      </button>
+      <div class="submenu" *ngIf="reportsExpanded">
+        <button mat-button class="submenu-item">Products</button>
+        <button mat-button class="submenu-item">Create Product</button>
+      </div>
+
+      <!-- Settings -->
+      <button mat-button class="menu-item">
+        <mat-icon>settings</mat-icon> Settings
+      </button>
+
+      <!-- Logout -->
+      <button mat-button class="menu-item">
+        <mat-icon>logout</mat-icon> Logout
+      </button>
+    </div>
+  </mat-sidenav>
+</mat-sidenav-container>

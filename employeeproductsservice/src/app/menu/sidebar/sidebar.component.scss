@@ -1,0 +1,51 @@
+/* Ensure the sidebar container takes full viewport height */
+.sidenav-container {
+  height: 100vh;         /* Take full height */
+  display: flex;         /* Flexbox layout to ensure sidebar works */
+  overflow: hidden;      /* Remove scrollbar from entire container */
+}
+
+/* Sidebar style with proper padding and height */
+.sidebar {
+  width: 250px;
+  background-color: #2c3e50;
+  color: white;
+  height: 90%;            /* Sidebar takes full height */
+  overflow-y: auto;        /* Only vertical scroll when content overflows */
+  overflow-x: hidden;      /* No horizontal scrolling */
+  padding: 15px;
+  font-family: Arial, sans-serif;
+}
+
+/* Menu items within sidebar */
+.menu-item {
+  width: 100%;
+  text-align: left;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+/* Submenu items indentation and styling */
+.submenu {
+  padding-left: 20px;
+}
+
+/* Ensuring submenu items are styled correctly */
+.submenu-item {
+  width: 100%;
+  text-align: left;
+  color: #ecf0f1;
+  padding: 5px 0;
+}
+
+/* Expand icon styling */
+.expand-icon {
+  margin-left: auto;
+}
+
+/* Hide any unnecessary scrollbars on the page itself */
+body {
+  overflow: hidden;       /* Prevent the global body scrollbar */
+}
