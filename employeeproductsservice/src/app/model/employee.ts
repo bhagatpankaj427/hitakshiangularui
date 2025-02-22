@@ -5,4 +5,5 @@ export interface Employee {
   mobile: string;
   address: string;
   checkInDate : string;
+  profileImage : File
 }

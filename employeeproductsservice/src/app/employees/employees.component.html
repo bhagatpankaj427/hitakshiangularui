@@ -9,6 +9,7 @@
           <th class="border border-gray-300 px-4 py-2">Mobile</th>
           <th class="border border-gray-300 px-4 py-2">Address</th>
           <th class="border border-gray-300 px-4 py-2">CheckInDate</th>
+          <th class="border border-gray-300 px-4 py-2">Image</th>
         </tr>
       </thead>
       <tbody>
@@ -19,6 +20,7 @@
           <td class="border border-gray-300 px-4 py-2">{{post.mobile}}</td>
           <td class="border border-gray-300 px-4 py-2">{{post.address}}</td>
           <td class="border border-gray-300 px-4 py-2">{{post.checkInDate}}</td>
+          <td class="border border-gray-300 px-4 py-2"><a [href]="post.profilePicture" target="_blank"><img [src]="post.profilePicture" alt="Uploaded Image" width="100" /></a></td>
         </tr>
       </tbody>
     </table>

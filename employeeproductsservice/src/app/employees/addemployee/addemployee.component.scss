@@ -49,3 +49,26 @@
     background: #218838;
   }
   
+
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+  }
+
+
+  mat-spinner {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
